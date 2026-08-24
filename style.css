@@ -388,3 +388,66 @@ html {
     color: white;
     box-shadow: 0px 0px 20px rgba(204, 68, 34, 0.4);
 }
+/* 18. MOBILE RESPONSIVENESS (For phones and small screens) */
+@media (max-width: 768px) {
+    
+    /* 1. Reduce body padding so the screen edges aren't crammed */
+    body {
+        padding: 15px;
+    }
+
+    /* 2. Fix the hero intro container so it stacks vertically instead of side-by-side */
+    .hero-container {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* 3. Center-align the intro text and reset margins on mobile */
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .speech-bubble {
+        margin-left: 0; /* Centers the speech bubble */
+    }
+
+    .hero-image img {
+        margin-right: 0;
+        margin-top: 30px; /* Puts space between the text and picture */
+        width: 220px;
+        height: 220px;
+    }
+
+    /* 4. Fix all content boxes (About Me, Works, Contact) to stack vertically */
+    .content-box {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* 5. Fix Education & Hobbies list items to stack text and images */
+    .list-item {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* 6. Fix the K-Pop Bias 3-column grid to stack into a single column */
+    .bias-grid {
+        flex-direction: column;
+    }
+
+    /* 7. Shrink the navbar links so they fit nicely across a phone screen */
+    .navbar {
+        gap: 15px;
+        padding: 12px 5px;
+        font-size: 12px;
+    }
+}
