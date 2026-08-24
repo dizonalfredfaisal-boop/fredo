@@ -388,25 +388,24 @@ html {
     color: white;
     box-shadow: 0px 0px 20px rgba(204, 68, 34, 0.4);
 }
-/* 18. MOBILE RESPONSIVENESS (For phones and small screens) */
+/* 18. MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     
-    /* 1. Reduce body padding so the screen edges aren't crammed */
     body {
-        padding: 15px;
+        padding: 10px;
     }
 
-    /* 2. Fix the hero intro container so it stacks vertically instead of side-by-side */
     .hero-container {
         flex-direction: column;
         margin-left: 0;
         margin-top: 80px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         padding: 20px;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    /* 3. Center-align the intro text and reset margins on mobile */
     .hero-text {
         display: flex;
         flex-direction: column;
@@ -414,42 +413,46 @@ html {
     }
 
     .speech-bubble {
-        margin-left: 0; /* Centers the speech bubble */
+        margin-left: 0;
     }
 
     .hero-image img {
         margin-right: 0;
-        margin-top: 30px; /* Puts space between the text and picture */
-        width: 220px;
-        height: 220px;
+        margin-top: 20px;
+        width: 200px;
+        height: 200px;
     }
 
-    /* 4. Fix all content boxes (About Me, Works, Contact) to stack vertically */
-    .content-box {
-        flex-direction: column;
-        gap: 30px;
-        padding: 20px;
-        text-align: center;
+    /* FORCE ALL CONTENT BOXES AND LIST BOXES TO GO FULL WIDTH */
+    .section-container {
+        width: 100%;
+        margin: 50px auto;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
-    /* 5. Fix Education & Hobbies list items to stack text and images */
-    .list-item {
+    .content-box, .list-box {
         flex-direction: column;
         gap: 20px;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .list-item {
+        flex-direction: column;
+        gap: 15px;
         text-align: center;
     }
 
-    /* 6. Fix the K-Pop Bias 3-column grid to stack into a single column */
     .bias-grid {
         flex-direction: column;
     }
 
-    /* 7. Shrink the navbar links so they fit nicely across a phone screen */
     .navbar {
-        gap: 15px;
-        padding: 12px 5px;
-        font-size: 12px;
+        gap: 10px;
+        padding: 10px 0;
+        font-size: 11px;
     }
 }
-
-
